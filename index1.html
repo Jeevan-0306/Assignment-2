@@ -160,8 +160,8 @@
 
         // Load data files
         Promise.all([
-            d3.json("https://raw.githubusercontent.com/umassdgithub/DataViz-Fall2024/refs/heads/main/Week%207/Major-Assignment-2/data/towns.topojson"),
-            d3.csv("https://raw.githubusercontent.com/umassdgithub/DataViz-Fall2024/refs/heads/main/Week%207/Major-Assignment-2/data/gini_index.csv")
+            d3.json("towns.topojson"),
+            d3.csv("gini_index.csv")
         ]).then(([topoData, giniData]) => {
             const towns = topojson.feature(topoData, topoData.objects.ma).features;
 
